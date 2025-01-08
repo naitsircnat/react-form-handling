@@ -22,6 +22,12 @@ export default function SurveyForm() {
     setRole(event.target.value);
   };
 
+  const buttonHandler = () => {
+    console.log(
+      `First name: ${firstName}, Last name: ${lastName}, Email: ${email}, Role: ${role}`
+    );
+  };
+
   return (
     <>
       <div>
@@ -64,6 +70,7 @@ export default function SurveyForm() {
         />
         Developer
       </div>
+      <button onClick={buttonHandler}>Submit</button>
     </>
   );
 }
